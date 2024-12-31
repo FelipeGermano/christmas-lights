@@ -1,0 +1,15 @@
+{
+  "name": "circle-animator",
+  "version": "1.0.0",
+  "description": "An Electron app to animate circles with user-configurable settings",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Felipe Germano",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.2.1"
+  }
+}

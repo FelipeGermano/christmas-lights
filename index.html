@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculos Animados</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        #controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="controls">
+        <button id="start-stop">Start</button>
+        <label>
+            Interval (ms):
+            <input type="number" id="interval" value="1000" min="100">
+        </label>
+        <label>
+            Intensity (0-1):
+            <input type="number" id="intensity" value="1" step="0.1" min="0" max="1">
+        </label>
+        <label>
+            Number of lines (1-7):
+            <input type="number" id="lines" value="1" min="1" max="7">
+        </label>
+        <div id="color-controls">
+            <label>Circle Colors:</label>
+            <input type="color" class="circle-color" value="#ff0000">
+            <input type="color" class="circle-color" value="#ffa500">
+            <input type="color" class="circle-color" value="#ffff00">
+            <input type="color" class="circle-color" value="#008000">
+            <input type="color" class="circle-color" value="#0000ff">
+            <input type="color" class="circle-color" value="#4b0082">
+            <input type="color" class="circle-color" value="#ee82ee">
+        </div>
+    </div>
+    <div id="container"></div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
